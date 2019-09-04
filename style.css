@@ -1,0 +1,231 @@
+/* core styles */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size:  1.1em;
+    text-align: center;
+    background: #333;
+    color:#fff;
+    line-height: 1.5;
+}
+ li a button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+color:rgb(236, 236, 236);
+text-decoration: none;
+}   
+#headerr{
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    background: #24252a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.logo{
+    cursor: pointer;
+    width: 400px;
+    padding: 5px 0;
+    
+}
+.ul li{
+    display: inline-block;
+    padding: 5px 45px;
+}
+
+.ul li a{
+    transition: all 0.3s ease 0s;
+}
+.ul li a:hover{
+ color:#0088a9;
+}
+#headerr #becall{
+    margin-top:5px;
+    padding: 10px 50px;
+    background: rgba(0,136,169,1);
+    border:none;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+#becall:hover{
+    background: rgba(0,136,169,0.8);
+}
+img{
+    width:100%;
+    display: block;
+    height: auto;
+}
+h1 , h2, h3{
+margin: 0;
+padding: 1em 0;
+}
+p{
+    margin: 0;
+    padding: 1em 0;
+}
+#btn-n{
+    display: inline-block;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin: 0.5em 0;
+}
+#btn-n:hover{
+background: #eaeaea;
+color:#333;
+}
+li{
+    list-style: none;
+}
+a{
+ text-decoration: none;
+ color: #eaeaea;
+}
+
+#showcase{
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+
+}
+#showcase .bg-image{
+    position: absolute;
+    background: #333/* url('https://images.pexels.com/photos/247791/pexels-photo-247791.png')*/  url('https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?cs=srgb&dl=code-coding-conceptual-270360.jpg&fm=jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: .4;
+}
+
+#showcase h1,
+#section-a h1{
+    padding-top:100px;
+    padding-bottom: 0;
+}
+#showcase .content-wrap{
+    padding: 0 1.5em;
+}
+#section-a{
+    background: #eaeaea;
+    color:#333;
+    padding-bottom: 2em; 
+}
+#section-b{
+    padding: 2em 1em 1em;
+}
+#section-b li{
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333; 
+}
+.card-content{
+    padding:  1.5em;
+}
+#section-c{
+    background: #fff;
+    color: #333;
+    padding: 2em;
+}
+#section-d .box{
+padding: 2em;
+color: white;
+}
+#section-d .box:first-child{
+    background: #2690d4;
+}
+#main-footer{
+    padding: 2em;
+    background: #333;
+    color:#fff;
+    text-align: center;
+    border-top: solid 1px #eaeaea;
+}
+#main-footer a{
+    color:#2690d4;
+}
+
+@media (min-width:700px){
+.grid{
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto,25em)) 1fr;
+}
+.content-wrap
+,#section-b ul{
+  grid-column: 2/4;
+}
+#section-a .content-text{
+    column-gap: 2em;
+    columns: 2;
+}
+#section-a .content-text p{
+    padding-top:0;
+}
+
+
+#section-b ul{
+    display: flex;
+justify-content: space-around;
+}
+#section-b li{
+    width:32%;
+}
+.box, #main-footer div{
+    grid-column: span 2;
+}
+#headerr{
+    position: sticky;
+    top:0;
+    width: 100vw;
+    background: #24252a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+.logo{
+    cursor: pointer;
+    width: 200px;
+    margin-left: 10x;
+}
+.ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.ul li a{
+    transition: all 0.3s ease 0s;
+}
+.ul li a:hover{
+ color:#0088a9;
+}
+#headerr #becall{
+    padding: 10px 28px;
+    background: rgba(0,136,169,1);
+    border:none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-right: 20px;
+}
+#becall:hover{
+    background: rgba(0,136,169,0.8);
+}
+}
