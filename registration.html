@@ -7,10 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="reg-body">
     <!-- Header is here -->
     <div id="headerr">
-        <h1 class="logo">Acme Web Solutions</h1>
+        <h1 class="logo">Aicom Web Solutions</h1>
         <nav id="nav-bar">
         <ul class="ul">
           <li><a href="index.html" id="home">Home</a></li>
@@ -21,9 +21,9 @@
       <div id="main">
             <div class="bg-images"></div>
           <h1> Registration Form </h1>
-          <form action="index.html">
+          <form action="index.html" method="get">
               <label for="name">Name :</label>
-              <input type="text" name="name" id="name" placeholder="Name..." required>
+              <input type="text" name="name" id="Name" placeholder="Name..." value="" required>
               <br>
               <label for="email">Email :</label>
               <input type="email" name="email" id="email" placeholder="Email..." required>
@@ -41,8 +41,13 @@
                  <option value="Mix">Mix</option>
              </select>
                 <br>
-            <input type="submit" id="btn-n">
-
+                <a href="#"><button type="submit" id="btn-n"> Subscribe</button></a>
+                <script>
+                  var submit=document.getElementById('btn-n');
+                  submit.addEventListener('click', function(){
+                    alert('Registered Success Fully !! Have A Nice Day');
+                  });
+                  </script>
           </form>
       </div>
       <div id="foot">

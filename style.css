@@ -20,7 +20,11 @@ body{
 color:rgb(236, 236, 236);
 text-decoration: none;
 }   
+
 #headerr{
+    position: sticky;
+    top:0;
+    z-index: 10;
     width: 100%;
     background: #24252a;
     display: flex;
@@ -58,6 +62,27 @@ text-decoration: none;
 }
 #becall:hover{
     background: rgba(0,136,169,0.8);
+}
+#headerr{
+    z-index: 10;
+}
+.ul li a{
+    position: relative;
+}
+.ul >li >a::after{
+    width: 0%;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    position: absolute;
+    height: 3px;
+    background: #0088a9;
+    bottom: -4px;
+    content: '';
+    left: 0;
+    z-index: 11;
+}
+.ul >li> a:hover::after{
+    width:100%;
 }
 img{
     width:100%;
@@ -117,7 +142,7 @@ a{
 }
 #main .bg-images{
     position: absolute;
-    background: #333 url('https://pixabay.com/get/55e3d14b4952ab14f6d1867dda6d49214b6ac3e456577840712b78d39e/key-3348307_1920.jpg');
+    background: #333 url('https://cdn.pixabay.com/photo/2017/01/11/00/30/lock-1970607_960_720.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -225,6 +250,11 @@ table {
   }
 
 
+  /* new section for customer's */
+  #section-e{
+      display: none;
+  }
+
   /*registration web page styles here included */
   #main{
       display: flex;
@@ -240,20 +270,20 @@ table {
 }
 form > input{
     width:60%;
-    height: 4vh;
+    height: 5vh;
     background: #9ad6c7;
     border:none;
     border-radius: 5px;
     color: #24252a;
     position: relative;
     outline: none;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 0 10px;
     font-size: 19px
 }
 form > label{
     font-size: 23px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 form >select{
     width: 40%;
@@ -277,9 +307,8 @@ form> #btn-n{
     color: #24252a;
 }
 #foot {
-    margin-top: 30px;
+    margin-top: 45px;
     width: 100%;
-    transform: translate(0%,100%);
 }
 
 
@@ -298,10 +327,167 @@ form> #btn-n{
 #section-a .content-text{
     column-gap: 2em;
     columns: 2;
+    margin-top: 25px;
 }
+#headerr{
+    z-index: 10;
+}
+.ul li a{
+    position: relative;
+}
+.ul >li >a::after{
+    width: 0%;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    position: absolute;
+    height: 3px;
+    background: #0088a9;
+    bottom: -4px;
+    content: '';
+    left: 0;
+    z-index: 11;
+}
+.ul >li> a:hover::after{
+    width:100%;
+}
+
 #section-a .content-text p{
-    padding-top:0;
+  padding-top: 0;
 }
+#section-a{
+   display: flex; 
+}
+ul >li >.card{
+    transition: all 1.5s;
+    transform: scale(.9);
+    cursor: pointer;
+}
+ul >li >.card >img{
+    border-radius: 10px;
+}
+ul >li > .card:hover{
+   transform: scale(1);
+}
+#section-c{
+    width:100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  .tr:nth-child(even){
+    cursor: pointer;
+      background: white;
+  }
+  .tr:hover{
+    cursor: pointer;
+      background: #ddd;
+  }
+  .box{
+      margin: 10px 0;
+  }
+  .box:first-child{
+      border-radius: 15px;
+      margin-left: 20px;
+      animation: work 4s ease forwards 2s;
+      transform: translate(-150%);
+  }
+  @keyframes work {
+    from{
+        transform: translate(-150%);  
+    }  
+      to{
+          transform: translate(0%);
+      }    
+  }
+
+  #section-e {
+      display: block;
+      width:100%;
+      background: rgb(241, 238, 238);
+      height: 600px;
+      color: #24252a; 
+  }
+  #section-e > h1{
+   background: #333;
+   color: #ddd;
+   margin: 0 180px;
+   border-radius: 15px;
+   margin-bottom: 10px;
+   padding: 20px 30px;
+  }
+  #card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+  }
+  #message{
+      
+      width:320px;
+      border:none;
+      height: 450px;
+      border-radius:15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 1s ease-in-out;
+      cursor: pointer;
+      opacity: .7;
+  }
+  #message:nth-child(1){
+    transform: scale(.7);
+ background: linear-gradient(0deg,#d53369,#cbad6d);
+  }
+
+  #message:nth-child(1):hover{
+    background: linear-gradient(45deg,#cbad6d,#d53369);
+    opacity: 1;
+    transform: scale(.9);
+  }
+  #message:nth-child(2){
+    transform: scale(.8);
+    background: linear-gradient(0deg,#833ab4,#fd1d1d,#fcb045);
+  }
+  #message:nth-child(2):hover{
+    background: linear-gradient(45deg,#fcb045,#fd1d1d,#833ab4);
+    transform: scale(1);
+    opacity: 1; 
+  }
+  #message:nth-child(3){
+    transform: scale(.7);
+    background: linear-gradient(0deg,#c2e59c,#64b3f4);
+  }
+  #message:nth-child(3):hover{
+    background: linear-gradient(45deg,#64b3f4,#c2e59c); 
+    transform: scale(.9);
+    opacity: 1;
+  }
+  #message>img{
+ height: 40%;
+ width: 58%;
+ border-radius:50%;
+ object-fit: cover;
+ background-repeat: no-repeat;
+  }
+  #message> p , h2{
+      padding: 10px;
+      width: 100%;
+      height: 20%;
+      color: #000;
+  text-align: center;
+  padding: 15px 20px;
+  }
+  #message>h2{
+      margin-top: 5px;
+  }
+  #message> p{
+      margin: 0 50px;
+  }
+
 
 
 #section-b ul{
@@ -352,5 +538,23 @@ justify-content: space-around;
 }
 #becall:hover{
     background: rgba(0,136,169,0.8);
+}
+
+/*registration form */
+#reg-body{
+    overflow:hidden
+}
+#form>input{
+    width:100%;
+    padding: 20px 30px;
+}
+#foot{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+#foot > #main-footer{
+padding: 1.5em;
 }
 }
