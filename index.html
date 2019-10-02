@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sescom</title>
+    <title>Aicom Web Solutions</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="headerr">
-        <h1 class="logo">Acme Web Solutions</h1>
+        <h1 class="logo">Aicom Web Solutions</h1>
         <nav id="nav-bar">
         <ul class="ul">
           <li><a href="index.html" id="home">Home</a></li>
@@ -22,7 +22,7 @@
     <header id="showcase" class="grid">
         <div class="bg-image"></div>
         <div class="content-wrap">
-          <h1>Welcome to Acme Web Solutions</h1>
+          <h1>Welcome to Aicom Web Solutions</h1>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.</p>
           <a href="#section-b" id="btn-n">Read More</a>
         </div>
@@ -123,16 +123,23 @@
         <section id="section-d" class="grid">
           <div class="box">
             <h2 class="content-title">Contact Us </h2>
-            <p> Email :<a href="mailto: contact@acmewebsolutions.test"> contact@acmewebsolutions.test</a></p>
-            <p> Phone Number :<a href="href="tel:9699731181"> 96997-31181</a></p>
-            <h3> Subscribe To Get latest Update From Acme Web Solutions</h3>
-            <input type="Email" id="subscribe" placeholder="Email...">
+            <p class="email"> Email :<a href="mailto: contact@Aicomwebsolutions.test"> contact@Aicomwebsolutions.test</a></p>
+            <p class="phone"> Phone Number :<a href="href="tel:9699731181"> +91 9699731181</a></p>
+            <h3 class="subscribe"> Subscribe To Get latest Update From Aicom Web Solutions</h3>
+          <form >
+            <label for="email" id="subscribe">Email : <input type="Email" placeholder="Email..." id="value" name="email" required></label>
             <a href="#" onclick="subscribe()"><button id="btn-n"> Subscribe</button></a>
+            </form>
           </div>
           <script>
           function subscribe(){
-              var subscribe = document.getElementById('subscribe').value;
-              alert(subscribe+' Subscribed successfully !!')
+              var subscribe = document.getElementById('value').value;
+              if( subscribe == ''){
+                alert('Enter Email ID for Updates');
+              }
+              else{
+              alert(subscribe+' Subscribed successfully !!');
+              }
           }
           </script>
           <div class="box">
@@ -143,10 +150,9 @@
       </main>
       <!-- Footer -->
       <footer id="main-footer" class="grid">
-        <div>Acme Web Solutions</div>
+        <div>Aicom Web Solutions</div>
         <div>Project By <a href="https://github.com/harshdave161" target="_blank">Harsh dave</a></div>
       </footer>
-      <script src="./app.js"></script>
     </body>
     </html>
 </body>
